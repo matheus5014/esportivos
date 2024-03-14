@@ -1,0 +1,325 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap ');
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+:root {
+    --fonte-menu: "Lato", sans-serif;
+    --fonte-titulo: "Orbitron", sans-serif;
+    --fonte-subtitulo: "Teko", sans-serif;
+    --fonte-texto: ;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: var(--fonte-menu);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: linear-gradient(72deg, #24614e , #200d49 );
+}
+
+.container {
+    max-width: 100vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    background-color: #000000;
+    box-shadow: 1px 0px 6px #000000b2;
+    padding: 25px;
+}
+
+.logo {
+    width: 25%;
+}
+
+.logo > img {
+    width: 190px;
+    cursor: pointer;
+}
+
+.menu {
+    width: 80%;
+    
+}
+
+.menu > nav > a {
+    color: #9f9f9f;
+    text-decoration: none;
+    margin-left: 10px;
+    padding-right: 30px;
+    font-size: 1.2em;
+    position: relative;
+}
+
+.menu > nav > a:hover {
+    color: #ffffff;
+    text-shadow: 0px 0px 5px #ffffff;
+}
+
+.menu > nav > a::after {
+    background-image: linear-gradient(45deg, #2e065b, #956bea);
+    border-radius: 2px;
+    content: " ";
+    width: 0px;
+    height: 4px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    transition: 0.4s;
+}
+
+.menu > nav > a:hover::after {
+    width: 45px;
+}
+
+.btn-menu {
+    width: 40px;
+    height: 40px;
+    border: 3px solid white;
+    border-radius: 3px;
+    background: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+.linha {
+    width: 20px;
+    height: 2px ;
+    background-color: white;
+    display: block;
+    margin: 5px auto;
+    position: relative;
+    
+    transform-origin: center;
+}
+
+
+/* Estilização do menu-mobile */
+
+.menu-mobile {
+    background-color: #565656b1;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top:90px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.menu-mobile > nav > a {
+    color: white;
+    font-size: 1.3em;
+    text-decoration: none;
+    display: block;
+    padding: 20px 30px;
+
+}
+
+.menu-mobile > nav > a:hover {
+    background-color: #000000a1;
+}
+
+
+/* -------------------------------------------------- */
+section.intro {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+section > h1 {
+    color: #ffffff;
+    font-family: var(--fonte-titulo);
+    font-weight: 800;
+    font-size: 2em;
+    padding: 5px;
+    margin-top: 40px;
+    margin-left: 43px;
+}
+
+section > p {
+    background-color: #0d0225;
+    color: #ffffff;
+    text-align: justify;
+    line-height: 1.6;
+    border-radius: 10px;
+    max-width: 900px;
+    padding: 25px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+section > picture > img {
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-bottom: 30px;
+}
+
+/* --------------------------------------------- */
+
+h2 {
+    color: #ffffff;
+    font-family: var(--fonte-titulo);
+    margin-top: 80px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+.caracteristicas {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.caracteristicas > .item {
+    border: 3px solid #2e065b;
+    border-radius: 5px;
+    width: 450px;
+    margin: 15px;
+    display: flex;
+}
+
+.caracteristicas > .item > .txt {
+    background-color: #13062c;
+    color: #ffffff;
+    width: 250px;
+    float: left;
+}
+
+.caracteristicas > .item > .txt > h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.3em;
+    text-align: center;
+    padding: 5px;
+}
+
+.caracteristicas > .item > .txt > p {
+    text-align: justify;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.caracteristicas > .item > .img1 {
+    background: url(../imagens/desing-aerodinamico.jpg) center center no-repeat;
+    background-size: cover;
+    box-shadow: inset 12px 0px 8px #13062c;
+    width: 200px;
+    height: 200px;
+    float: right;
+}
+
+.caracteristicas > .item > .img2 {
+    background: url(../imagens/motor-esportivo2.jpg) center center no-repeat;
+    background-size: cover;
+    box-shadow: inset 12px 0px 8px #13062c;
+    width: 200px;
+    height: 200px;
+    float: right;
+}
+
+.caracteristicas > .item > .img3 {
+    background: url(../imagens/suspensão-esportiva.jpg) center center no-repeat;
+    background-size: cover;
+    box-shadow: inset 12px 0px 8px #13062c;
+    width: 200px;
+    height: 200px;
+    float: right;
+}
+
+.caracteristicas > .item > .img4 {
+    background: url(../imagens/interior-esportivo.jpg) center center no-repeat;
+    background-size: cover;
+    box-shadow: inset 12px 0px 8px #13062c;
+    width: 200px;
+    height: 200px;
+    float: right;
+}
+
+/* ----------------------------------- */
+
+.marcas {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.marcas > .item {
+    width: 200px;
+    height: 300px;
+    margin : 20px;
+    margin-top: 40px;
+}
+
+.marcas > .item > a > img {
+    width: 100%;
+    height: 100%;
+    border: 5px solid #000000;
+    cursor: pointer;
+}
+
+.marcas > .item > a > img:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+    box-shadow: 0px 0px 18px #a455edc5;
+    border: 5px solid #000000;
+}
+
+.marcas > .item > h3 {
+    color: #ffffff;
+    font-weight: 700;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+footer {
+    background-color: #0a0417;
+    height: 160px;
+    margin-top: 60px;
+}   
+
+footer > p {
+    color: white;
+    padding: 25px;
+}
+
+footer > a {
+    display: block;
+    color: #ffffff;
+}
+
+footer > a >  i {
+    background-color: #956bea;
+    font-size: 1.5em;
+    border-radius: 6px;
+    padding: 6px;
+    margin-left: 20px;
+    margin-right: 10px;
+    transition: .3s;
+}
+
+footer > a >  i:hover {
+    background-color: #ffffff;
+    color: #956bea;
+    box-shadow: 0px 0px 8px #956bea;
+}
